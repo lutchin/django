@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+{% load static %}
+<script src="{% static "js/add.js" %}"></script>
+
+  <title>Динамические поля</title>
+</head>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'input:index' %}" method="post">
+
+
+      {% csrf_token %}
+
+
+<div ID="items">
+    <strong>Name 1: </strong>
+    {{ form }}<br>
+    <input type="button" value="Добавить поле" onClick="AddItem();" ID="add">
+</div>
+
+
+<input type="submit" value="Сохранить" />
+</form>
+<a href="{% url 'input:results' %}"><input type="button" value="Посмотреть результат" ></a>

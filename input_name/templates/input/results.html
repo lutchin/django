@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jsonb</title>
+{% if name_list %}
+    <ul>
+    {% for name in name_list %}
+        <li>{{ name.id }} : {{ name.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data :(</p>
+{% endif %}
+    
+</head>
+<body>
+
+</body>
+</html>
